@@ -9,9 +9,16 @@
     Width="800"
     Height="450"
     mc:Ignorable="d">
-    <StackPanel>
-
-        <Label Content="Hello world" />
-
-    </StackPanel>
+    <Grid>
+        <ListView ItemsSource="{Binding Addins}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">                        
+                        <TextBlock Text="Addins : " />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </Window>

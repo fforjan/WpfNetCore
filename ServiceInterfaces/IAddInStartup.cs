@@ -6,5 +6,7 @@ namespace ServiceInterfaces
     public interface IAddInStartup
     {
         void ConfigureServices(IConfiguration configuration, IServiceCollection services);
+
+        string Name {get;}
     }
 }

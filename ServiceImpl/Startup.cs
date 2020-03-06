@@ -7,9 +7,10 @@ namespace Addin {
 
     public  class Startup : ServiceInterfaces.IAddInStartup
     {
+        public string Name => "Default Service Implementation";
 
         public void ConfigureServices(IConfiguration configuration, IServiceCollection services) {
-             services.AddScoped<ISampleService, SampleService>();
+             services.AddScoped<ISampleService, SampleService>();             
         }
         
     }   

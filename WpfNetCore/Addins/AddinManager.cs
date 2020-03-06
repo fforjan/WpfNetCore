@@ -17,8 +17,8 @@ namespace WpfNetCore.Addins
             foreach(var addinAssembly in addinConfiguration.AddinsDefinition.Split(';')) {
                 var addin = AssemblyLoadContext.Default.LoadFromAssemblyPath(Path.Join(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), addinAssembly));                
                 var myInstance = (IAddInStartup)Activator.CreateInstance(addin.GetType("Addin.Startup"));
-
                 myInstance.ConfigureServices(configuration, services);
+                services.AddSingleton(typeof(ServiceInterfaces.IAddInStartup), myInstance);
             }
 
         }

@@ -8,6 +8,7 @@
     using System;
     using System.Windows;
     using WpfNetCore.Models;
+    using WpfNetCore.ViewModel;
 
     public partial class App : Application
     {
@@ -36,6 +37,7 @@
         {
             services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
             WpfNetCore.Addins.AddinManager.ConfigureServices(configuration, services);
+            services.AddSingleton<MainWindowViewModel>();
             services.AddSingleton<MainWindow>();
         }
 
