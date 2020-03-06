@@ -1,14 +1,14 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using ServiceInterfaces;
-using System;
-using System.Windows;
-using WpfNetCore.Models;
-using WpfNetCore.Services;
-
-namespace WpfNetCore
+﻿namespace WpfNetCore
 {
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
+    using ServiceImpl;
+    using ServiceInterfaces;
+    using System;
+    using System.Windows;
+    using WpfNetCore.Models;
+
     public partial class App : Application
     {
         private readonly IHost host;

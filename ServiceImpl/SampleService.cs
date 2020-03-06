@@ -1,4 +1,4 @@
-﻿namespace WpfNetCore.Services
+﻿namespace ServiceImpl
 {
     using System;
     using ServiceInterfaces;

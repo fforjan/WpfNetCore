@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfNetCore", "WpfNetCore\Wp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceInterfaces", "ServiceInterfaces\ServiceInterfaces.csproj", "{6759D755-D4EF-4862-9FF6-E94A1ACBCE90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceImpl", "ServiceImpl\ServiceImpl.csproj", "{9F570B53-45FF-41D0-8D0D-9F4EDE06EFD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6759D755-D4EF-4862-9FF6-E94A1ACBCE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6759D755-D4EF-4862-9FF6-E94A1ACBCE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6759D755-D4EF-4862-9FF6-E94A1ACBCE90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F570B53-45FF-41D0-8D0D-9F4EDE06EFD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F570B53-45FF-41D0-8D0D-9F4EDE06EFD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F570B53-45FF-41D0-8D0D-9F4EDE06EFD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F570B53-45FF-41D0-8D0D-9F4EDE06EFD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
