@@ -1,4 +1,4 @@
-﻿namespace WpfNetCore.Services
+﻿namespace ServiceInterfaces
 {
     public interface ISampleService
     {

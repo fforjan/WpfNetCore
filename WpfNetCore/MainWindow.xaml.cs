@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.Options;
-using System.Windows;
-using WpfNetCore.Models;
-using WpfNetCore.Services;
-
-namespace WpfNetCore
+﻿namespace WpfNetCore
 {
+    using Microsoft.Extensions.Options;
+    using ServiceInterfaces;
+    using System.Windows;
+    using WpfNetCore.Models;
+
     public partial class MainWindow : Window
     {
         private readonly ISampleService sampleService;

@@ -1,7 +1,8 @@
-﻿using System;
-
-namespace WpfNetCore.Services
+﻿namespace WpfNetCore.Services
 {
+    using System;
+    using ServiceInterfaces;
+
     public class SampleService : ISampleService
     {
         public string GetCurrentDate()
