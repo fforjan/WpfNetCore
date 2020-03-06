@@ -6,6 +6,6 @@
 
         public int IntegerSetting { get; set; }
 
-        public bool BooleanSetting { get; set; }
+        public bool BooleanSetting { get; set; }     
     }
 }

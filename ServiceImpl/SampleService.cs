@@ -2,7 +2,7 @@
 {
     using System;
     using ServiceInterfaces;
-
+        
     public class SampleService : ISampleService
     {
         public string GetCurrentDate()

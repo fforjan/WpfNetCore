@@ -35,8 +35,7 @@
         private void ConfigureServices(IConfiguration configuration, IServiceCollection services)
         {
             services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
-            services.AddScoped<ISampleService, SampleService>();
-
+            WpfNetCore.Addins.AddinManager.ConfigureServices(configuration, services);
             services.AddSingleton<MainWindow>();
         }
 
