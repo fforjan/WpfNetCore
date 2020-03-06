@@ -9,15 +9,21 @@ namespace WpfNetCore.Addins
     {
         static  DependencyProperty IdProperty = DependencyProperty.Register(nameof(Id), typeof(Type), typeof(AddInContent));
 
-        public Type Id  { get { return (Type)GetValue(IdProperty); }
-    set { SetValue(IdProperty, value); }
+        public Type Id  { 
+            get { return (Type)GetValue(IdProperty); }
+            set { SetValue(IdProperty, value); }
         }
 
         override protected void OnInitialized(EventArgs e) {
             base.OnInitialized(e);
-            var serviceProvider = this.DataContext as IServiceProvider;
-            var instance = serviceProvider.GetRequiredService(this.Id);
-            this.AddChild(instance);
+            try {
+                var serviceProvider = this.DataContext as IServiceProvider;
+                var instance = serviceProvider.GetRequiredService(this.Id);            
+                this.AddChild(instance);
+            }
+            catch {
+                this.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
