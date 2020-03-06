@@ -8,7 +8,8 @@ namespace Addin
     {
         public string Name => "Addin Implementation";
 
-        public void ConfigureServices(IConfiguration configuration, IServiceCollection services) {             
+        public void ConfigureServices(IConfiguration configuration, IServiceCollection services) {   
+             services.AddScoped<ServiceInterfaces.Addins.Addin1, AddinImpl.WaitingControl>();            
         }
         
     }   

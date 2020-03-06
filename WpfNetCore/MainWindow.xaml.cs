@@ -13,12 +13,11 @@
 
         public MainWindow(MainWindowViewModel viewModel, ISampleService sampleService, IOptions<AppSettings> settings)
         {
+            this.DataContext = viewModel;
             InitializeComponent();
 
             this.sampleService = sampleService;
             this.settings = settings.Value;
-
-            this.DataContext = viewModel;
         }
     }
 }

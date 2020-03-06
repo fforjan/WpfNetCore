@@ -3,6 +3,7 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+
     using ServiceImpl;
     using ServiceInterfaces;
     using System;
@@ -35,10 +36,10 @@
 
         private void ConfigureServices(IConfiguration configuration, IServiceCollection services)
         {
-            services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
+            services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));            
             WpfNetCore.Addins.AddinManager.ConfigureServices(configuration, services);
             services.AddSingleton<MainWindowViewModel>();
-            services.AddSingleton<MainWindow>();
+            services.AddSingleton<MainWindow>();             
         }
 
         protected override async void OnStartup(StartupEventArgs e)

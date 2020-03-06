@@ -4,6 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfNetCore"
+    xmlns:addin="clr-namespace:WpfNetCore.Addins"
+    xmlns:addin-definition="clr-namespace:ServiceInterfaces.Addins;assembly=ServiceInterfaces"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ig="http://schemas.infragistics.com/xaml"
     Title="MainWindow"
@@ -25,6 +27,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ig:XamBusyIndicator IsBusy="true" Animation="Azure" Grid.Row="1" />
+        <addin:AddInContent Id="addin-definition:Addin1" DataContext="{Binding ServiceProvider}"  Grid.Row="1"/>
     </Grid>
 </Window>
