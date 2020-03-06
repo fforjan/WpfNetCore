@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ServiceInterfaces\ServiceInterfaces.csproj" />
     <ProjectReference Include="..\ServiceImpl\ServiceImpl.csproj" />
+    <ProjectReference Include="..\AddinImpl\AddinImpl.csproj" />
   </ItemGroup>
 
 </Project>
